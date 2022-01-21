@@ -64,8 +64,10 @@ export default {
 
   methods: {
     async search() {
-      const response = await this.$axios.$get("/dummy/oneway.json");
-      this.schedules = response.data.Schedules;
+      const response = await this.axios.get("/dummy/oneway.json");
+      if (response.data !== null) {
+        this.schedules = response.data.data.Schedules;
+      }
     },
     select(id) {
       const query = {

@@ -10,17 +10,21 @@
             Company SITE ADMINISTRATOR
           </div>
         </div>
-
+        <contact-form />
+        <passenger-form />
         <button class="btn btn-primary btn-lg mt-3 float-end">Continue</button>
       </div>
-      <div class="col"></div>
+      <div class="col">
+        <flight-summary />
+      </div>
     </div>
   </div>
 </template>
-
 <script>
-export default {};
+import ContactForm from "@/components/flight/form/ContactForm.vue";
+import PassengerForm from "@/components/flight/form/PassengerForm.vue";
+import FlightSummary from "@/components/flight/form/FlightSummary.vue";
+export default {
+  components: { ContactForm, PassengerForm, FlightSummary },
+};
 </script>
-
-<style lang="scss" scoped>
-</style>
