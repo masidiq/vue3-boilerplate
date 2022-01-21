@@ -17,4 +17,14 @@ const router = createRouter({
   ]
 })
 
+const DEFAULT_TITLE = "Opsigo";
+router.afterEach((to) => {
+  if (to.meta.title) {
+    document.title = to.meta.title + ' - ' + DEFAULT_TITLE;
+  } else {
+    document.title = DEFAULT_TITLE;
+  }
+
+});
+
 export default router

@@ -22,10 +22,16 @@ export default [
     name: 'flight-booking',
     path: '/flight/booking',
     component: flight_booking,
+    meta: {
+      title: 'Booking Flight',
+    },
   },
   {
     name: 'flight-oneway',
     path: '/flight/oneway',
     component: flight_oneway,
+    meta: {
+      title: 'Flight One Way',
+    },
   },
 ]
